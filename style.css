@@ -106,6 +106,7 @@ img {
   min-height: 100vh;
   /* ↓ 省略形だとブラウザーによってうまく表示されない
     background: var(--light-blue) url('../images/hero.jpg') no-repeat center / cover; */
+  background-image: url(../computer-gb12c8e158_1920.jpg);
   background-color: var(--light-blue);
   background-repeat: no-repeat;
   background-position: center;
