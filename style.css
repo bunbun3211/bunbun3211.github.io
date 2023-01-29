@@ -259,3 +259,13 @@ aside p {
 .sub-menu a:hover {
   color: #0bd;
 }
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  /* HOME */
+  .home-content {
+    margin-top: 20%;
+  }
+}
