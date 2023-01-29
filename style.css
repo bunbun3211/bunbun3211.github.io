@@ -276,4 +276,12 @@ aside p {
    .home-content {
      margin-top: 20%;
    }
+   /* NEWS */
+   .news-contents {
+     flex-direction: column;
+   }
+   article,
+   aside {
+     width: 100%;
+   }
 }
