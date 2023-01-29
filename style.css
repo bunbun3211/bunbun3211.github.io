@@ -280,8 +280,4 @@ aside p {
    .news-contents {
      flex-direction: column;
    }
-   article,
-   aside {
-     width: 100%;
-   }
 }
