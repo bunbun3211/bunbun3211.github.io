@@ -3,28 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOUFU寿司 - メニュー</title>
+  <title>寿司屋のメニュー</title>
   <style>
-    /* CSSスタイル */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
     header {
       background-color: #333;
       color: #fff;
-      padding: 20px;
+      padding: 20px 0;
+      text-align: center;
     }
 
     header h1 {
       margin: 0;
+      font-size: 2em;
     }
 
     nav ul {
       list-style-type: none;
       padding: 0;
+      text-align: center;
     }
 
     nav ul li {
@@ -35,6 +39,7 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
+      font-size: 1.2em;
     }
 
     main {
@@ -42,42 +47,71 @@
     }
 
     .menu-item {
-      border-bottom: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
       margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
     }
 
     .menu-item h3 {
       margin-top: 0;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .menu-item p {
+      margin-top: 5px;
+      color: #666;
     }
 
     .menu-item span {
       float: right;
+      font-weight: bold;
+      color: #ff6600;
+      font-size: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>TOUFU寿司</h1>
+    <h1>寿司屋</h1>
     <nav>
       <ul>
         <li><a href="#">ホーム</a></li>
         <li><a href="#">メニュー</a></li>
+        <li><a href="#">お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
   
   <main>
     <section id="menu">
-      <h2>メニュー</h2>
+      <h2 style="text-align: center;">メニュー</h2>
       <div class="menu-item">
         <h3>マグロ</h3>
         <p>おいしいマグロの握り寿司です。</p>
-        <span>¥100</span>
+        <span>¥300</span>
       </div>
       <div class="menu-item">
         <h3>サーモン</h3>
         <p>新鮮なサーモンの握り寿司です。</p>
-        <span>¥100</span>
+        <span>¥250</span>
       </div>
       <!-- 他のメニューアイテムも同様に追加 -->
     </section>
@@ -88,11 +122,17 @@
   </footer>
   
   <script>
-    // JavaScriptコード
     document.addEventListener("DOMContentLoaded", function() {
+      // メニューデータ
+      const menuData = [
+        { name: "まぐろ", description: "おいしいまぐろの握り寿司です。", price: 300 },
+        { name: "サーモン", description: "新鮮なサーモンの握り寿司です。", price: 250 },
+        // 他のメニューアイテムも同様に追加
+      ];
 
       const menuSection = document.getElementById("menu");
 
+      // メニューデータを元にHTMLを生成して追加する関数
       function renderMenuItems() {
         menuData.forEach(item => {
           const menuItem = document.createElement("div");
@@ -115,9 +155,9 @@
         });
       }
 
+      // メニューを表示する関数を呼び出す
       renderMenuItems();
     });
   </script>
 </body>
 </html>
-
