@@ -1,16 +1,5 @@
 // script.js
 document.addEventListener("DOMContentLoaded", function() {
-  // サンプルのメニューデータ
-  const menuData = [
-    { name: "まぐろ", price: 100 },
-    { name: "サーモン", price: 100 },
-    { name: "えび", price: 100 },
-    { name: "いくら", price: 100 },
-    { name: "納豆巻き", price: 100 },
-    { name: "ぶり", price: 100 },
-    { name: "〆さば", price: 100 },
-    // 他のメニューアイテムも同様に追加
-  ];
 
   const menuSection = document.getElementById("menu");
 
