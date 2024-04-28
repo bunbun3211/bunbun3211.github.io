@@ -3,17 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>寿司屋のメニュー</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>TOUFU寿司 - メニュー</title>
+  <style>
+    /* CSSスタイル */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .menu-item {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .menu-item h3 {
+      margin-top: 0;
+    }
+
+    .menu-item span {
+      float: right;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>寿司屋</h1>
+    <h1>TOUFU寿司</h1>
     <nav>
       <ul>
         <li><a href="#">ホーム</a></li>
         <li><a href="#">メニュー</a></li>
-        <li><a href="#">お問い合わせ</a></li>
       </ul>
     </nav>
   </header>
@@ -23,40 +71,58 @@
       <h2>メニュー</h2>
       <div class="menu-item">
         <h3>マグロ</h3>
+        <p>おいしいマグロの握り寿司です。</p>
         <span>¥100</span>
       </div>
       <div class="menu-item">
         <h3>サーモン</h3>
+        <p>新鮮なサーモンの握り寿司です。</p>
         <span>¥100</span>
       </div>
       <!-- 他のメニューアイテムも同様に追加 -->
-      <div class="menu-item">
-        <h3>えび</h3>
-        <span>¥100</span>
-      </div>
-      <div class="menu-item">
-        <h3>いくら</h3>
-        <span>¥100</span>
-      </div>
-      <div class="menu-item">
-        <h3>納豆巻き</h3>
-        <span>¥100</span>
-      </div>
-      <div class="menu-item">
-        <h3>ぶり</h3>
-        <span>¥100</span>
-      </div>
-      <div class="menu-item">
-        <h3>〆さば</h3>
-        <span>¥100</span>
-      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 TOUFU寿司</p>
+    <p>© 2024 寿司屋</p>
   </footer>
   
-  <script src="script.js"></script>
+  <script>
+    // JavaScriptコード
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuData = [
+        { name: "まぐろ", price: 100 },
+        { name: "サーモン", price: 100 },
+        // 他のメニューアイテムも同様に追加
+      ];
+
+      const menuSection = document.getElementById("menu");
+
+      function renderMenuItems() {
+        menuData.forEach(item => {
+          const menuItem = document.createElement("div");
+          menuItem.classList.add("menu-item");
+
+          const itemName = document.createElement("h3");
+          itemName.textContent = item.name;
+
+          const itemDescription = document.createElement("p");
+          itemDescription.textContent = item.description;
+
+          const itemPrice = document.createElement("span");
+          itemPrice.textContent = `¥${item.price}`;
+
+          menuItem.appendChild(itemName);
+          menuItem.appendChild(itemDescription);
+          menuItem.appendChild(itemPrice);
+
+          menuSection.appendChild(menuItem);
+        });
+      }
+
+      renderMenuItems();
+    });
+  </script>
 </body>
 </html>
+
