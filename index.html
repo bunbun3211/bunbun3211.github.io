@@ -1,137 +1,63 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7GR8EPSRXT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7GR8EPSRXT');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOUFU寿司 - ホーム</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #ff6600;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-
-    .hero {
-      background-image: url('29713964_l.png')
-      background-size: cover;
-      height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-
-    .hero h2 {
-      font-size: 4em;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 1.5em;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    .content {
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOUFU寿司</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>TOUFU寿司</h1>
-    <nav>
-      <ul>
-        <li><a href="https://bunbun3211.github.io/index.html">ホーム</a></li>
-        <li><a href="https://bunbun3211.github.io/menu.html">メニュー</a></li>
-        <li><a href="https://bunbun3211.github.io/privacy-policy.html">プライバシーポリシー</a></li>
-      </ul>
-    </nav>
-    <link rel=”icon” href=“favicon.ico”>
-  </header>
-  
-  <div class="hero">
-    <div>
-      <h2>スーパーの普通のネタでお寿司を提供します</h2>
-      <p>当店ではスーパーで買った普通のネタを使用し、お客様に普通よりは美味しいお寿司を提供いたします。</p>
-    </div>
-  </div>
-
-  <main>
-    <section class="content">
-      <h2>TOUFU寿司へようこそ</h2>
-      <p>当店ではスーパーで買った普通なネタを使用し、お客様に普通のお寿司を提供しています。ぜひ一度お越しください。</p>
+    <header>
+        <div class="container">
+            <h1 class="logo">TOUFU寿司</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">予約</a></li>
+                    <li><a href="#">アクセス</a></li>
+                    <li><a href="#">コンタクト</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>新鮮な食材と熟練の技術が織り成す極上の寿司体験</h2>
+        </div>
     </section>
-    <section class="content">
-      <h2>店舗情報</h2>
-      <p>当店はJR下曽我駅から徒歩１5分の好立地にあります。ぜひお立ち寄りください。<br>
-         🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣🍣<br>
-      </p>
+    <section class="about">
+        <div class="container">
+            <h2>TOUFU寿司へようこそ</h2>
+            <p>私たちの寿司屋では、最高品質の食材を使い、熟練のシェフが心を込めて寿司を握ります。</p>
+        </div>
     </section>
-  </main>
-
-  <footer>
-    <script src="https://kit.fontawesome.com/b67bf141dc.js" crossorigin="anonymous"></script>
-    <p>&copy; 2024 TOUFU寿司</p>
-    <a href="https://twitter.com/ToufuOnFire/"><i class="fa-brands fa-x-twitter"></i></a>
-    <audio src="sushiyanobgm.mp3" autoplay id="audio">
-  </footer>
+    <section class="menu-preview">
+        <div class="container">
+            <h2>おすすめメニュー</h2>
+            <div class="menu-item">
+                <img src="sushi1.jpg" alt="寿司1">
+                <h3>寿司セット1</h3>
+                <p>新鮮なネタを使った寿司セット。</p>
+            </div>
+            <div class="menu-item">
+                <img src="sushi2.jpg" alt="寿司2">
+                <h3>寿司セット2</h3>
+                <p>贅沢なネタを使った特選寿司セット。</p>
+            </div>
+        </div>
+    </section>
+    <section class="access">
+        <div class="container">
+            <h2>アクセス</h2>
+            <p>〒123-4567 東京都渋谷区神南1-2-3</p>
+            <p>営業時間: 11:00〜22:00</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>© 2024 TOUFU寿司 | <a href="#">プライバシーポリシー</a></p>
+        </div>
+    </footer>
 </body>
 </html>
