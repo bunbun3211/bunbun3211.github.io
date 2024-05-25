@@ -4,7 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUFU寿司</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 1.5em;
+        }
+
+        header nav {
+            float: right;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav ul li a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('sushi-banner.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            margin-top: 60px;
+        }
+
+        .about, .menu-preview, .access, .menu, .privacy-policy {
+            padding: 50px 0;
+        }
+
+        .menu-preview .menu-item, .menu .menu-item {
+            display: inline-block;
+            width: 45%;
+            margin: 2.5%;
+            text-align: center;
+        }
+
+        .menu-preview .menu-item img, .menu .menu-item img {
+            width: 100%;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header .logo, header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .menu-preview .menu-item, .menu .menu-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .menu-slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+        }
+
+        .menu-slider .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .menu-slider .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .menu-slider .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .menu-slider .control {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,52 +146,160 @@
             <h1 class="logo">TOUFU寿司</h1>
             <nav>
                 <ul>
-                    <li><a href="#">ホーム</a></li>
-                    <li><a href="#">メニュー</a></li>
-                    <li><a href="#">予約</a></li>
-                    <li><a href="#">アクセス</a></li>
-                    <li><a href="#">コンタクト</a></li>
+                    <li><a href="#home" class="nav-link">ホーム</a></li>
+                    <li><a href="#contact" class="nav-link">蓮華寺のホームページ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="hero">
+
+    <!-- ホームページ -->
+    <section id="home" class="hero">
         <div class="container">
-            <h2>新鮮な食材と熟練の技術が織り成す極上の寿司体験</h2>
+            <h2>スーパーの普通の食材と初心者の技術が織り成す普通の寿司</h2>
         </div>
     </section>
     <section class="about">
         <div class="container">
             <h2>TOUFU寿司へようこそ</h2>
-            <p>私たちの寿司屋では、最高品質の食材を使い、熟練のシェフが心を込めて寿司を握ります。</p>
+            <p>私たちの寿司屋では、スーパーの食材を使い、普通の人が心を込めて寿司を握ります。</p>
         </div>
     </section>
     <section class="menu-preview">
         <div class="container">
             <h2>おすすめメニュー</h2>
+            <div class="menu-slider">
+                <div class="slides">
+                    <div class="slide">
+                        <div class="menu-item">
+                            <img src="sushi1.jpg" alt="寿司1">
+                            <h3>マグロ</h3>
+                            <p>新鮮なネタを使った寿司セット。</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="menu-item">
+                            <img src="sushi2.jpg" alt="寿司2">
+                            <h3>サーモン</h3>
+                            <p>贅沢なネタを使った特選寿司セット。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="control prev">&lt;</button>
+                    <button class="control next">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="access" class="access">
+        <div class="container">
+            <h2>アクセス</h2>
+            <p>〒250-0215 神奈川県小田原市千代815-1</p>
+            <p>営業期間：７〜８月 10:00~14:00</p>
+        </div>
+    </section>
+
+    <!-- プライバシーポリシー -->
+    <section id="privacy" class="privacy-policy">
+        <div class="container">
+            <h2>プライバシーポリシー</h2>
+            <p>私たちは、お客様のプライバシーを尊重し、個人情報の保護に努めています。本ポリシーでは、収集する情報の種類、使用方法、共有方法、保護方法について説明します。</p>
+            
+            <h3>収集する情報</h3>
+            <p>お客様から提供される個人情報（名前、メールアドレス、電話番号など）およびウェブサイト利用情報を収集します。</p>
+            
+            <h3>情報の使用</h3>
+            <p>収集した情報は、サービス提供、顧客サポート、マーケティング活動のために使用されます。</p>
+            
+            <h3>情報の共有</h3>
+            <p>お客様の情報を第三者と共有することはありません。ただし、法的義務がある場合やサービス提供に必要な場合を除きます。</p>
+            
+            <h3>情報の保護</h3>
+            <p>お客様の個人情報を保護するために、適切な技術的および組織的措置を講じています。</p>
+            
+            <h3>ユーザーの権利</h3>
+            <p>お客様は、個人情報の確認、修正、削除を要求する権利があります。これらの権利を行使するには、当社までご連絡ください。</p>
+            
+            <h3>ポリシーの変更</h3>
+            <p>プライバシーポリシーを随時更新することがあります。最新のポリシーは本ウェブサイトに掲載されます。</p>
+            
+            <h3>コンタクト情報</h3>
+            <p>プライバシーポリシーに関するお問い合わせは、以下の連絡先までご連絡ください。</p>
+            <p>Email: privacy@toufusushi.com</p>
+        </div>
+    </section>
+
+    <!-- メニュー -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>メニュー</h2>
             <div class="menu-item">
                 <img src="sushi1.jpg" alt="寿司1">
                 <h3>寿司セット1</h3>
                 <p>新鮮なネタを使った寿司セット。</p>
+                <p>価格: 2000円</p>
             </div>
             <div class="menu-item">
                 <img src="sushi2.jpg" alt="寿司2">
                 <h3>寿司セット2</h3>
                 <p>贅沢なネタを使った特選寿司セット。</p>
+                <p>価格: 3500円</p>
             </div>
         </div>
     </section>
-    <section class="access">
-        <div class="container">
-            <h2>アクセス</h2>
-            <p>〒123-4567 東京都渋谷区神南1-2-3</p>
-            <p>営業時間: 11:00〜22:00</p>
-        </div>
-    </section>
+
     <footer>
         <div class="container">
-            <p>© 2024 TOUFU寿司 | <a href="#">プライバシーポリシー</a></p>
+            <p>© 2024 TOUFU寿司 | <a href="#privacy">プライバシーポリシー</a></p>
         </div>
     </footer>
+
+    <script>
+        // スライダー機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const slideArray = Array.from(document.querySelectorAll('.slide'));
+            const nextButton = document.querySelector('.next');
+            const prevButton = document.querySelector('.prev');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+            }
+
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % slideArray.length;
+                showSlide(currentIndex);
+            });
+
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + slideArray.length) % slideArray.length;
+                showSlide(currentIndex);
+            });
+        });
+
+        // ナビゲーションリンクのアクティブクラスの付与
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // スクロールアニメーション
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
