@@ -3,273 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOUFU寿司</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header .logo {
-            float: left;
-            font-size: 1.5em;
-        }
-
-        header nav {
-            float: right;
-        }
-
-        header nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        header nav ul li a.active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        .hero {
-            background: url('sushiho-mupe-zi.png') no-repeat center center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 100px 0;
-            margin-top: 60px;
-        }
-
-        .about, .menu-preview, .access, .menu, .privacy-policy {
-            padding: 50px 0;
-        }
-
-        .menu-preview .menu-item, .menu .menu-item {
-            display: inline-block;
-            width: 45%;
-            margin: 2.5%;
-            text-align: center;
-        }
-
-        .menu-preview .menu-item img, .menu .menu-item img {
-            width: 100%;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            header .logo, header nav {
-                float: none;
-                text-align: center;
-            }
-
-            header nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .menu-preview .menu-item, .menu .menu-item {
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
-
-        .menu-slider {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 300px;
-        }
-
-        .menu-slider .slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .menu-slider .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .menu-slider .controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .menu-slider .control {
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <title>寿司屋 - ホーム</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="logo">TOUFU寿司</h1>
-            <nav>
-                <ul>
-                    <li><a href="https://bunbun3211.github.io/index.html" class="nav-link">ホーム</a></li>
-                    <li><a href="https://temple.nichiren.or.jp/0071057-rengeji/" class="nav-link">蓮華寺のホームページ</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>寿司屋</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="menu.html">メニュー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <!-- ホームページ -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>スーパーの普通の食材と初心者の技術が織り成す普通の寿司</h2>
-        </div>
-    </section>
-    <section class="about">
-        <div class="container">
-            <h2>TOUFU寿司へようこそ</h2>
-            <p>私たちの寿司屋では、スーパーの食材を使い、普通の人が心を込めて寿司を握ります。</p>
-        </div>
-    </section>
-    <section class="menu-preview">
-        <div class="container">
-            <h2>おすすめメニュー</h2>
-            <div class="menu-slider">
-                <div class="slides">
-                    <div class="slide">
-                        <div class="menu-item">
-                            <img src="tuna.png" alt="寿司1">
-                            <h3>マグロ</h3>
-                            <p>新鮮なネタを使った寿司セット。</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="menu-item">
-                            <img src="salmon.png" alt="寿司2">
-                            <h3>サーモン</h3>
-                            <p>贅沢なネタを使った特選寿司セット。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="controls">
-                    <button class="control prev">&lt;</button>
-                    <button class="control next">&gt;</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="access" class="access">
-        <div class="container">
-            <h2>アクセス</h2>
-            <p>〒250-0215 神奈川県小田原市千代815-1</p>
-            <p>営業期間：７〜８月 10:00~14:00</p>
-        </div>
-    </section>
-
-    <!-- メニュー -->
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2>メニュー</h2>
-            <div class="menu-item">
-                <img src="tuna.png" alt="寿司1">
-                <h3>マグロ</h3>
-                <p>美味しい。</p>
-                <p>価格: 0円</p>
-            </div>
-            <div class="menu-item">
-                <img src="salmon.png" alt="寿司2">
-                <h3>サーモン</h3>
-                <p>美味しい。</p>
-                <p>価格: ０円</p>
-            </div>
-        </div>
-    </section>
-
+    <div class="hero">
+        <h1>ようこそ寿司屋へ</h1>
+        <p>新鮮で美味しい寿司をお届けします</p>
+    </div>
+    <div class="content">
+        <section class="about">
+            <h2>私たちについて</h2>
+            <p>私たちは新鮮な食材を使った最高の寿司を提供することに専念しています。</p>
+        </section>
+    </div>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 TOUFU寿司 | <a href="https://bunbun3211.github.io/privacy-policy.html">プライバシーポリシー</a></p>
-        </div>
+        <p>© 2024 寿司屋. すべての権利を保有します。</p>
     </footer>
-
-    <script>
-        // スライダー機能
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelector('.slides');
-            const slideArray = Array.from(document.querySelectorAll('.slide'));
-            const nextButton = document.querySelector('.next');
-            const prevButton = document.querySelector('.prev');
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                slides.style.transform = 'translateX(' + (-index * 100) + '%)';
-            }
-
-            nextButton.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % slideArray.length;
-                showSlide(currentIndex);
-            });
-
-            prevButton.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + slideArray.length) % slideArray.length;
-                showSlide(currentIndex);
-            });
-        });
-
-        // ナビゲーションリンクのアクティブクラスの付与
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // スクロールアニメーション
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        });
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
