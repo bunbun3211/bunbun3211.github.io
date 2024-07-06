@@ -1,160 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOUFU寿司 - メニュー</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    .menu-item {
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-      transition: transform 0.3s;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .menu-item h3 {
-      margin-top: 0;
-      font-size: 1.5em;
-      color: #333;
-    }
-
-    .menu-item p {
-      margin-top: 5px;
-      color: #666;
-    }
-
-    .menu-item span {
-      float: right;
-      font-weight: bold;
-      color: #ff6600;
-      font-size: 1.2em;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <script src="https://kit.fontawesome.com/b67bf141dc.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿司屋 - メニュー</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>TOUFU寿司</h1>
-    <nav>
-      <ul>
-        <li><a href="https://bunbun3211.github.io/index.html">ホーム</a></li>
-        <li><a href="https://bunbun3211.github.io/menu.html">メニュー</a></li>
-        <li><a href="https://bunbun3211.github.io/privacy-policy.html">プライバシーポリシー</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section id="menu">
-      <h2 style="text-align: center;">メニュー</h2>
-      <div class="menu-item">
-        <h3>マグロ</h3>
-        <p>おいしいマグロの握り寿司です。</p>
-        <span>¥300</span>
-      </div>
-      <div class="menu-item">
-        <h3>サーモン</h3>
-        <p>新鮮なサーモンの握り寿司です。</p>
-        <span>¥250</span>
-      </div>
-      <!-- 他のメニューアイテムも同様に追加 -->
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2024 寿司屋</p>
-    <a href="https://twitter.com/ToufuOnFire"><i class="fa-brands fa-x-twitter"></i></a>
-    <audio src="sushitoutyakuon.mp3" autoplay id="audio">
-  </footer>
-  
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-
-      const menuSection = document.getElementById("menu");
-
-      // メニューデータを元にHTMLを生成して追加する関数
-      function renderMenuItems() {
-        menuData.forEach(item => {
-          const menuItem = document.createElement("div");
-          menuItem.classList.add("menu-item");
-
-          const itemName = document.createElement("h3");
-          itemName.textContent = item.name;
-
-          const itemDescription = document.createElement("p");
-          itemDescription.textContent = item.description;
-
-          const itemPrice = document.createElement("span");
-          itemPrice.textContent = `¥${item.price}`;
-
-          menuItem.appendChild(itemName);
-          menuItem.appendChild(itemDescription);
-          menuItem.appendChild(itemPrice);
-
-          menuSection.appendChild(menuItem);
-        });
-      }
-
-      // メニューを表示する関数を呼び出す
-      renderMenuItems();
-    });
-  </script>
-  <script src="https://kit.fontawesome.com/b67bf141dc.js" crossorigin="anonymous"></script>
+    <header>
+        <h1>寿司屋</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="menu.html">メニュー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <section class="menu">
+            <h2>メニュー</h2>
+            <img src="sushi-menu.jpg" alt="寿司メニュー">
+        </section>
+    </div>
+    <footer>
+        <p>&copy; TOUFU寿司 <a href="https://twitter.com/@ToufuOnFire"><i class="fa-brands fa-x-twitter"></i></a><a href="https://instagram.com/odawara_rengeji_temple/"><i class="fa-brands fa-instagram"></i></a></p>
+    </footer>
 </body>
 </html>
