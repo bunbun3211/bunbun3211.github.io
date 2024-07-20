@@ -1,67 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <script src="https://kit.fontawesome.com/b67bf141dc.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>組んだプログラム</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-        }
-        video {
-            width: 80%;
-            max-width: 600px;
-            height: auto;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+    <title>プログラム</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>組んだプログラムの説明</h1>
-        </div>
+        <h1>TOUFU寿司</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="menu.html">メニュー</a></li>
+                <li><a href="https://temple.nichiren.or.jp/0071057-rengeji/">千葉山 蓮華寺</a></li>
+                <li><a href="https://ohtoufu.com/">TOUFU公式</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <div class="content">
-            <video controls>
-            <source src="sample-video.mp4" type="video/mp4">
-            <source src="sample-video.webm" type="video/webm">
-        </video>
-            <p>私たちが組んだプログラムは、プラレールが通過したことを正確に感知し、その瞬間にストップレールが作動するように設計されています。</p>
-            <p>このシステムは、高精度なセンサーと連動しており、プラレールの動きをリアルタイムで追跡します。</p>
-            <p>センサーがプラレールの通過を検知すると、瞬時に信号を送信し、ストップレールが作動することで列車同士がぶつかることを防ぎます。</p>
-            <p>このようにして、私たちのプログラムは、プラレールの運行管理をより安全でスムーズに行うための重要な役割を果たしています。</p>
-        </div>
+    <div class="content">
+        <section class="menu">
+            <h2><プログラム/h2>
+            <ul class="menu-list">
+                <li>
+                    <p>私たちが組んだプログラムは、プラレールが通過したことを正確に感知し、その瞬間にストップレールが作動するように設計されています。</p>
+                    <p>このシステムは、高精度なセンサーと連動しており、プラレールの動きをリアルタイムで追跡します。</p>
+                    <p>センサーがプラレールの通過を検知すると、瞬時に信号を送信し、ストップレールが作動することで列車同士がぶつかることを防ぎます。</p>
+                    <p>さらに、このプログラムには動作のタイミングや感知の感度を微調整できる機能も搭載しており、さまざまな列車に対応可能です。このようにして、私たちのプログラムは、プラレールの運行管理をより安全でスムーズに行うための重要な役割を果たしています。
+                    </p>
+                </li>
+               
+            </ul>
+        </section>
     </div>
+    <footer>
+        <p>&copy; TOUFU寿司 <a href="https://twitter.com/@ToufuOnFire"><i class="fa-brands fa-x-twitter"></i></a><a href="https://instagram.com/odawara_rengeji_temple/"><i class="fa-brands fa-instagram"></i></a></p>
+    </footer>
 </body>
 </html>
