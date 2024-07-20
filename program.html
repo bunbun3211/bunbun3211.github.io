@@ -11,11 +11,18 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
+            text-align: center;
+        }
+        video {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 600px;
+            height: auto;
         }
         header {
             background: #333;
@@ -46,6 +53,10 @@
     </header>
     <div class="container">
         <div class="content">
+            <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            <source src="sample-video.webm" type="video/webm">
+        </video>
             <p>私たちが組んだプログラムは、プラレールが通過したことを正確に感知し、その瞬間にストップレールが作動するように設計されています。</p>
             <p>このシステムは、高精度なセンサーと連動しており、プラレールの動きをリアルタイムで追跡します。</p>
             <p>センサーがプラレールの通過を検知すると、瞬時に信号を送信し、ストップレールが作動することで列車同士がぶつかることを防ぎます。</p>
