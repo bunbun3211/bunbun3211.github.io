@@ -86,3 +86,31 @@ footer {
         margin: 5px 0;
     }
 }
+
+/* Add these styles to the existing styles.css file */
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 40%;
+}
+
+.about-text {
+    flex: 1 1 60%;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-text, .about-content img {
+        flex: 1 1 100%;
+    }
+}
