@@ -1,107 +1,92 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.logo {
+  font-size: 1.5em;
 }
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
 }
-nav ul li a {
-    color: white;
-    text-decoration: none;
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
 }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+}
+
 .hero {
-    background-image: url('29296263_m.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  text-align: center;
 }
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
+
+.menu {
+  padding: 20px;
+  background-color: #eee;
 }
-.hero p {
-    font-size: 1.2em;
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.content {
-    padding: 20px;
+
+.menu-item {
+  flex: 1 1 calc(50% - 20px);
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
-.menu, .about, .contact {
-    margin-bottom: 40px;
-}
-.menu img {
-    width: 100%;
-    height: auto;
-}
-.menu h2, .about h2, .contact h2 {
-    font-size: 2em;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-.contact form {
-    display: flex;
-    flex-direction: column;
-}
-.contact form input, .contact form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 1em;
-}
+
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
+
+/* レスポンシブデザイン */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-}
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+  }
 
-/* Add these styles to the existing styles.css file */
+  .menu-toggle {
+    display: block;
+  }
 
-.about-content {
+  .nav-links.show {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-}
-
-.about-content img {
-    max-width: 100%;
-    height: auto;
-    flex: 1 1 40%;
-}
-
-.about-text {
-    flex: 1 1 60%;
+  }
 }
