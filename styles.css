@@ -105,19 +105,3 @@ footer {
 .about-text {
     flex: 1 1 60%;
 }
-
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
-    .about-text, .about-content img {
-        flex: 1 1 100%;
-    }
-}
-
-.fa-brands {
-    color: white;
-}
-.pz {
-    width:450px;
-}
